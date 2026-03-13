@@ -1,0 +1,72 @@
+{
+  "queue_path": "/tmp/social_media_queue",
+  "facebook": {
+    "enabled": false,
+    "access_token": "YOUR_FACEBOOK_ACCESS_TOKEN",
+    "page_id": "YOUR_FACEBOOK_PAGE_ID",
+    "api_version": "v18.0",
+    "notes": {
+      "setup": "Get access token from Facebook Developer Console",
+      "url": "https://developers.facebook.com/",
+      "permissions": "pages_manage_posts, pages_read_engagement"
+    }
+  },
+  "instagram": {
+    "enabled": false,
+    "access_token": "YOUR_INSTAGRAM_ACCESS_TOKEN",
+    "account_id": "YOUR_INSTAGRAM_BUSINESS_ACCOUNT_ID",
+    "api_version": "v18.0",
+    "notes": {
+      "setup": "Requires Instagram Business Account linked to Facebook Page",
+      "url": "https://developers.facebook.com/docs/instagram-api",
+      "permissions": "instagram_basic, instagram_content_publish"
+    }
+  },
+  "twitter": {
+    "enabled": false,
+    "api_key": "YOUR_TWITTER_API_KEY",
+    "api_secret": "YOUR_TWITTER_API_SECRET",
+    "access_token": "YOUR_TWITTER_ACCESS_TOKEN",
+    "access_secret": "YOUR_TWITTER_ACCESS_SECRET",
+    "bearer_token": "YOUR_TWITTER_BEARER_TOKEN",
+    "notes": {
+      "setup": "Get credentials from Twitter Developer Portal",
+      "url": "https://developer.twitter.com/",
+      "permissions": "Read and Write"
+    }
+  },
+  "linkedin": {
+    "enabled": false,
+    "access_token": "YOUR_LINKEDIN_ACCESS_TOKEN",
+    "person_urn": "urn:li:person:YOUR_PERSON_ID",
+    "notes": {
+      "setup": "Get access token via OAuth 2.0",
+      "url": "https://www.linkedin.com/developers/",
+      "permissions": "w_member_social"
+    }
+  },
+  "posting_rules": {
+    "require_approval": true,
+    "approval_threshold": 0,
+    "max_posts_per_day": 10,
+    "min_interval_minutes": 30,
+    "allowed_hours": {
+      "start": 8,
+      "end": 20
+    }
+  },
+  "content_guidelines": {
+    "max_length": {
+      "twitter": 280,
+      "facebook": 63206,
+      "instagram": 2200,
+      "linkedin": 3000
+    },
+    "hashtag_limits": {
+      "twitter": 2,
+      "facebook": 5,
+      "instagram": 30,
+      "linkedin": 3
+    }
+  }
+}

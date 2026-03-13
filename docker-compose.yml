@@ -1,0 +1,130 @@
+version: '3.8'
+
+services:
+  # PostgreSQL for Odoo
+  postgres:
+    image: postgres:15
+    container_name: ai-employee-postgres
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-odoo_password_change_me}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - ai-employee-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U odoo"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Odoo Community Edition
+  odoo:
+    image: odoo:19
+    container_name: ai-employee-odoo
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8069:8069"
+    environment:
+      HOST: postgres
+      USER: odoo
+      PASSWORD: ${POSTGRES_PASSWORD:-odoo_password_change_me}
+    volumes:
+      - odoo_data:/var/lib/odoo
+      - ./docker/odoo/addons:/mnt/extra-addons
+      - ./docker/odoo/config:/etc/odoo
+    networks:
+      - ai-employee-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8069/web/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  # Watchers and Orchestrator
+  watchers:
+    build:
+      context: .
+      dockerfile: docker/watchers/Dockerfile
+    container_name: ai-employee-watchers
+    network_mode: "host"
+    depends_on:
+      - odoo
+    environment:
+      # Vault path
+      VAULT_PATH: /vault
+
+      # Odoo connection (use localhost with host network mode)
+      ODOO_URL: http://localhost:8069
+      ODOO_DB: postgres
+      ODOO_USERNAME: ${ODOO_USERNAME:-admin}
+      ODOO_PASSWORD: ${ODOO_PASSWORD:-admin}
+
+      # Gmail (mount credentials as secrets)
+      GMAIL_CREDENTIALS_PATH: /secrets/credentials.json
+      GMAIL_TOKEN_PATH: /secrets/token.pickle
+
+      # WhatsApp (mount session as secret)
+      WHATSAPP_SESSION_PATH: /secrets/whatsapp_session
+
+      # LinkedIn (credentials from .env)
+      LINKEDIN_CLIENT_ID: ${LINKEDIN_CLIENT_ID}
+      LINKEDIN_CLIENT_SECRET: ${LINKEDIN_CLIENT_SECRET}
+
+      # Twitter (credentials from .env)
+      TWITTER_API_KEY: ${TWITTER_API_KEY}
+      TWITTER_API_SECRET: ${TWITTER_API_SECRET}
+      TWITTER_ACCESS_TOKEN: ${TWITTER_ACCESS_TOKEN}
+      TWITTER_ACCESS_TOKEN_SECRET: ${TWITTER_ACCESS_TOKEN_SECRET}
+      TWITTER_BEARER_TOKEN: ${TWITTER_BEARER_TOKEN}
+
+      # LLM Backend (Hybrid: ollama or groq)
+      LLM_BACKEND: ${LLM_BACKEND:-ollama}
+
+      # Ollama (local, free) - use WSL2 IP address
+      OLLAMA_HOST: ${OLLAMA_HOST:-172.20.119.127}
+
+      # Groq (cloud, free) - get key at https://console.groq.com
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      GROQ_MODEL: ${GROQ_MODEL:-llama-3.3-70b-versatile}
+
+      # Logging
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      LOG_PATH: /app/logs
+
+      # Python
+      PYTHONUNBUFFERED: 1
+    volumes:
+      # Mount vault (read/write)
+      - ./AI_Employee_Vault:/vault
+
+      # Mount logs (read/write)
+      - ./logs:/app/logs
+
+      # Mount secrets (read-write for token refresh)
+      - ./secrets:/secrets
+
+      # Mount config (read-only)
+      - ./docker/config:/config:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import sys; sys.exit(0)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  ai-employee-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local
+  odoo_data:
+    driver: local

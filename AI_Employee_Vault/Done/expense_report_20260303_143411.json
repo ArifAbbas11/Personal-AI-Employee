@@ -1,0 +1,106 @@
+{
+  "processed_at": "2026-03-03T14:34:11.750916",
+  "source_file": "workflows/sample_expenses.csv",
+  "total_expenses": 10,
+  "total_amount": 2683.2200000000003,
+  "category_totals": {
+    "utilities": 274.99,
+    "equipment": 1250.0,
+    "travel": 442.25,
+    "meals_entertainment": 188.99,
+    "office_supplies": 27.990000000000002,
+    "professional_services": 499.0
+  },
+  "expenses": [
+    {
+      "description": "Microsoft Office 365 Subscription",
+      "amount": 149.99,
+      "vendor": "Microsoft",
+      "date": "2026-03-03",
+      "category": "utilities",
+      "confidence": 0.458137630927542,
+      "processed_at": "2026-03-03T14:34:11.578240"
+    },
+    {
+      "description": "AWS Cloud Hosting - March",
+      "amount": 1250.0,
+      "vendor": "AWS",
+      "date": "2026-03-03",
+      "category": "equipment",
+      "confidence": 0.45791894219366563,
+      "processed_at": "2026-03-03T14:34:11.598508"
+    },
+    {
+      "description": "Team Lunch Meeting",
+      "amount": 285.5,
+      "vendor": "Restaurant",
+      "date": "2026-03-03",
+      "category": "travel",
+      "confidence": 0.594869201507778,
+      "processed_at": "2026-03-03T14:34:11.617273"
+    },
+    {
+      "description": "Office Supplies - Paper & Toner",
+      "amount": 89.99,
+      "vendor": "Staples",
+      "date": "2026-03-02",
+      "category": "meals_entertainment",
+      "confidence": 0.5122164519432658,
+      "processed_at": "2026-03-03T14:34:11.636434"
+    },
+    {
+      "description": "Google Workspace",
+      "amount": 12.0,
+      "vendor": "Google",
+      "date": "2026-03-02",
+      "category": "office_supplies",
+      "confidence": 0.5639705314593104,
+      "processed_at": "2026-03-03T14:34:11.657644"
+    },
+    {
+      "description": "Client Dinner",
+      "amount": 156.75,
+      "vendor": "Restaurant",
+      "date": "2026-03-01",
+      "category": "travel",
+      "confidence": 0.40620554533693437,
+      "processed_at": "2026-03-03T14:34:11.676384"
+    },
+    {
+      "description": "Domain Renewal - company.com",
+      "amount": 15.99,
+      "vendor": "GoDaddy",
+      "date": "2026-03-01",
+      "category": "office_supplies",
+      "confidence": 0.567724594665098,
+      "processed_at": "2026-03-03T14:34:11.695292"
+    },
+    {
+      "description": "Adobe Creative Cloud",
+      "amount": 99.0,
+      "vendor": "Adobe",
+      "date": "2026-03-01",
+      "category": "meals_entertainment",
+      "confidence": 0.5333363798979683,
+      "processed_at": "2026-03-03T14:34:11.712181"
+    },
+    {
+      "description": "Printer Maintenance",
+      "amount": 125.0,
+      "vendor": "Office Depot",
+      "date": "2026-02-28",
+      "category": "utilities",
+      "confidence": 0.452224053407017,
+      "processed_at": "2026-03-03T14:34:11.732429"
+    },
+    {
+      "description": "Conference Registration",
+      "amount": 499.0,
+      "vendor": "EventBrite",
+      "date": "2026-02-28",
+      "category": "professional_services",
+      "confidence": 0.28798102350051086,
+      "processed_at": "2026-03-03T14:34:11.750704"
+    }
+  ]
+}

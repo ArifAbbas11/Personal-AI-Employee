@@ -1,0 +1,64 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+
+# Logs
+logs/
+*.log
+
+# Secrets (NEVER include in Docker images)
+.env
+.env.*
+*.key
+*.pem
+token.pickle
+credentials.json
+whatsapp_session/
+secrets/
+
+# Obsidian
+.obsidian/
+
+# Documentation (not needed in container)
+*.md
+!README.md
+
+# Test files
+test_*.py
+*_test.py
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Node modules
+node_modules/
+
+# Large documentation files
+*_COMPLETE.md
+*_GUIDE.md
+*_PLAN.md
+HACKATHON*.md
+PLATINUM*.md

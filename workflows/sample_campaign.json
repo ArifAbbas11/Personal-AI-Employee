@@ -1,0 +1,47 @@
+{
+  "name": "Q2 Product Launch Campaign",
+  "start_date": "2026-04-01",
+  "end_date": "2026-06-30",
+  "content_items": [
+    {
+      "title": "Announcing Our Revolutionary New AI Platform",
+      "platform": "linkedin",
+      "scheduled_date": "2026-04-01"
+    },
+    {
+      "title": "Behind the Scenes: How We Built It",
+      "platform": "instagram",
+      "scheduled_date": "2026-04-05"
+    },
+    {
+      "title": "Customer Success Story: 10x Productivity Gains",
+      "platform": "linkedin",
+      "scheduled_date": "2026-04-10"
+    },
+    {
+      "title": "Limited Time Offer: 50% Off Launch Special",
+      "platform": "twitter",
+      "scheduled_date": "2026-04-15"
+    },
+    {
+      "title": "Product Demo: See It In Action",
+      "platform": "linkedin",
+      "scheduled_date": "2026-04-20"
+    },
+    {
+      "title": "Meet the Team Behind the Innovation",
+      "platform": "instagram",
+      "scheduled_date": "2026-04-25"
+    },
+    {
+      "title": "Early Adopter Testimonials",
+      "platform": "twitter",
+      "scheduled_date": "2026-05-01"
+    },
+    {
+      "title": "Technical Deep Dive: Architecture Overview",
+      "platform": "linkedin",
+      "scheduled_date": "2026-05-05"
+    }
+  ]
+}

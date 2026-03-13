@@ -1,0 +1,18 @@
+{
+  "url": "http://localhost:8069",
+  "database": "your_database_name",
+  "username": "your_username",
+  "password": "your_password",
+  "company_id": 1,
+  "default_currency": "USD",
+  "approval_required": true,
+  "approval_threshold": 1000.0,
+  "notes": {
+    "setup": "Copy this file to odoo_config.json and fill in your Odoo credentials",
+    "url": "Your Odoo instance URL (e.g., http://localhost:8069 or https://your-domain.odoo.com)",
+    "database": "Your Odoo database name",
+    "username": "Your Odoo username (usually admin)",
+    "password": "Your Odoo password or API key",
+    "approval_threshold": "Invoices above this amount require manual approval"
+  }
+}

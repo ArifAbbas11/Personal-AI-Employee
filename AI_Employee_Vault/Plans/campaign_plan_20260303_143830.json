@@ -1,0 +1,126 @@
+{
+  "campaign_name": "Q2 Product Launch Campaign",
+  "planned_at": "2026-03-03T14:38:30.816952",
+  "total_content": 8,
+  "average_engagement": 3.7977267980249727,
+  "platform_stats": {
+    "linkedin": {
+      "count": 4,
+      "total_engagement": 15.195112171716188
+    },
+    "instagram": {
+      "count": 2,
+      "total_engagement": 7.610429566485215
+    },
+    "twitter": {
+      "count": 2,
+      "total_engagement": 7.576272645998376
+    }
+  },
+  "content_items": [
+    {
+      "title": "Announcing Our Revolutionary New AI Platform",
+      "platform": "linkedin",
+      "scheduled_date": "2026-04-01",
+      "predicted_engagement": 3.798778042929047,
+      "recommendations": [
+        "Consider expanding content (current: 58, optimal: ~150 chars)",
+        "Add 2-3 relevant hashtags to increase discoverability",
+        "Low predicted engagement - consider revising content or timing",
+        "Questions tend to drive engagement on LinkedIn"
+      ],
+      "optimized_at": "2026-03-03T14:38:30.659009"
+    },
+    {
+      "title": "Behind the Scenes: How We Built It",
+      "platform": "instagram",
+      "scheduled_date": "2026-04-05",
+      "predicted_engagement": 3.8052147832426075,
+      "recommendations": [
+        "Consider expanding content (current: 48, optimal: ~150 chars)",
+        "Add 2-3 relevant hashtags to increase discoverability",
+        "Low predicted engagement - consider revising content or timing",
+        "Instagram posts perform well with 5-10 hashtags"
+      ],
+      "optimized_at": "2026-03-03T14:38:30.679587"
+    },
+    {
+      "title": "Customer Success Story: 10x Productivity Gains",
+      "platform": "linkedin",
+      "scheduled_date": "2026-04-10",
+      "predicted_engagement": 3.798778042929047,
+      "recommendations": [
+        "Consider expanding content (current: 60, optimal: ~150 chars)",
+        "Add 2-3 relevant hashtags to increase discoverability",
+        "Low predicted engagement - consider revising content or timing",
+        "Questions tend to drive engagement on LinkedIn"
+      ],
+      "optimized_at": "2026-03-03T14:38:30.697771"
+    },
+    {
+      "title": "Limited Time Offer: 50% Off Launch Special",
+      "platform": "twitter",
+      "scheduled_date": "2026-04-15",
+      "predicted_engagement": 3.788136322999188,
+      "recommendations": [
+        "Consider expanding content (current: 56, optimal: ~280 chars)",
+        "Add 2-3 relevant hashtags to increase discoverability",
+        "Low predicted engagement - consider revising content or timing",
+        "Consider mentioning relevant accounts to increase reach"
+      ],
+      "optimized_at": "2026-03-03T14:38:30.724185"
+    },
+    {
+      "title": "Product Demo: See It In Action",
+      "platform": "linkedin",
+      "scheduled_date": "2026-04-20",
+      "predicted_engagement": 3.798778042929047,
+      "recommendations": [
+        "Consider expanding content (current: 44, optimal: ~150 chars)",
+        "Add 2-3 relevant hashtags to increase discoverability",
+        "Low predicted engagement - consider revising content or timing",
+        "Questions tend to drive engagement on LinkedIn"
+      ],
+      "optimized_at": "2026-03-03T14:38:30.746963"
+    },
+    {
+      "title": "Meet the Team Behind the Innovation",
+      "platform": "instagram",
+      "scheduled_date": "2026-04-25",
+      "predicted_engagement": 3.8052147832426075,
+      "recommendations": [
+        "Consider expanding content (current: 49, optimal: ~150 chars)",
+        "Add 2-3 relevant hashtags to increase discoverability",
+        "Low predicted engagement - consider revising content or timing",
+        "Instagram posts perform well with 5-10 hashtags"
+      ],
+      "optimized_at": "2026-03-03T14:38:30.768954"
+    },
+    {
+      "title": "Early Adopter Testimonials",
+      "platform": "twitter",
+      "scheduled_date": "2026-05-01",
+      "predicted_engagement": 3.788136322999188,
+      "recommendations": [
+        "Consider expanding content (current: 40, optimal: ~280 chars)",
+        "Add 2-3 relevant hashtags to increase discoverability",
+        "Low predicted engagement - consider revising content or timing",
+        "Consider mentioning relevant accounts to increase reach"
+      ],
+      "optimized_at": "2026-03-03T14:38:30.795253"
+    },
+    {
+      "title": "Technical Deep Dive: Architecture Overview",
+      "platform": "linkedin",
+      "scheduled_date": "2026-05-05",
+      "predicted_engagement": 3.798778042929047,
+      "recommendations": [
+        "Consider expanding content (current: 56, optimal: ~150 chars)",
+        "Add 2-3 relevant hashtags to increase discoverability",
+        "Low predicted engagement - consider revising content or timing",
+        "Questions tend to drive engagement on LinkedIn"
+      ],
+      "optimized_at": "2026-03-03T14:38:30.816804"
+    }
+  ]
+}
